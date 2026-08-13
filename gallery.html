@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Gallery</title>
+    <title>My Projects - Sumedha Yelukuru</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
+            color: #333;
         }
 
         header {
@@ -31,27 +32,25 @@
 
         section {
             background-color: white;
-            margin: 20px;
+            margin: 20px auto;
             padding: 25px;
+            max-width: 800px;
             border-radius: 8px;
-            text-align: center;
         }
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+        article {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
         }
 
-        .box {
-            width: 200px;
-            height: 150px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
+        h2 {
+            color: #333;
+        }
+
+        h3 {
+            color: #555;
         }
     </style>
 </head>
@@ -59,26 +58,76 @@
 <body>
 
 <header>
-    <h1>My Gallery</h1>
-    <p>My Projects and Memories</p>
+    <h1>My Projects</h1>
+    <p>Projects and experiences from my learning journey</p>
 </header>
 
 <nav>
     <a href="portfolio.html">Home</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">Projects</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <section>
-    <h2>My Gallery</h2>
 
-    <div class="gallery">
-        <div class="box">Project 1</div>
-        <div class="box">Project 2</div>
-        <div class="box">Project 3</div>
-        <div class="box">Project 4</div>
-    </div>
+    <h2>Academic & Project Experience</h2>
+
+    <article>
+        <h3>1. Club Membership Checker - C</h3>
+
+        <p>
+            A college assignment developed using C programming
+            to implement a club membership checking system.
+        </p>
+
+        <p>
+            <strong>Technology:</strong> C Programming
+        </p>
+    </article>
+
+    <article>
+        <h3>2. Club Membership Checker - Java</h3>
+
+        <p>
+            A Java-based version of the club membership checker
+            developed as part of my college programming assignments.
+        </p>
+
+        <p>
+            <strong>Technology:</strong> Java
+        </p>
+    </article>
+
+    <article>
+        <h3>3. E-Waste Management Project</h3>
+
+        <p>
+            A group project focused on the problem of electronic
+            waste. This project was developed with my friends
+            during Google WOW 2026 in Vizag.
+        </p>
+
+        <p>
+            <strong>Type:</strong> Group Project / Hackathon
+        </p>
+    </article>
+
+    <article>
+        <h3>4. Automatic Generation of High-Quality MCQs With LLMs</h3>
+
+        <p>
+            A current project focused on the automatic generation
+            of high-quality multiple-choice questions for
+            Artificial Intelligence education using Large Language
+            Models.
+        </p>
+
+        <p>
+            <strong>Area:</strong> Machine Learning & Large Language Models
+        </p>
+    </article>
+
 </section>
 
 </body>

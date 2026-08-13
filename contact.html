@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Me</title>
+    <title>Contact - Sumedha Yelukuru</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
+            color: #333;
         }
 
         header {
@@ -33,23 +34,19 @@
             background-color: white;
             margin: 20px auto;
             padding: 25px;
+            max-width: 700px;
             border-radius: 8px;
-            max-width: 600px;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
+        .contact-info {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
 
-        button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
+        a {
+            color: #333;
         }
     </style>
 </head>
@@ -58,31 +55,53 @@
 
 <header>
     <h1>Contact Me</h1>
-    <p>Let's get in touch</p>
+    <p>Let's connect!</p>
 </header>
 
 <nav>
     <a href="portfolio.html">Home</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">Projects</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <section>
+
     <h2>Get in Touch</h2>
 
-    <form>
-        <label>Name:</label>
-        <input type="text" placeholder="Enter your name">
+    <p>
+        If you would like to connect with me or know more about
+        my projects and learning journey, feel free to reach out.
+    </p>
 
-        <label>Email:</label>
-        <input type="email" placeholder="Enter your email">
+    <div class="contact-info">
+        <h3>Email</h3>
+        <p>
+            <a href="mailto:sumedhayelukuru13@gmail.com">
+                sumedhayelukuru13@gmail.com
+            </a>
+        </p>
+    </div>
 
-        <label>Message:</label>
-        <textarea rows="5" placeholder="Enter your message"></textarea>
+    <div class="contact-info">
+        <h3>GitHub</h3>
+        <p>
+            <a href="https://github.com/sumedhayelukuru" target="_blank">
+                github.com/sumedhayelukuru
+            </a>
+        </p>
+    </div>
 
-        <button type="submit">Send Message</button>
-    </form>
+    <div class="contact-info">
+        <h3>LinkedIn</h3>
+        <p>
+            <a href="https://www.linkedin.com/in/sumedha-yelukuru-b2a905326/"
+               target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
+    </div>
+
 </section>
 
 </body>
