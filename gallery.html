@@ -3,278 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Sumedha Yelukuru</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #303030;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        header h1 {
-            margin: 0 0 8px;
-            font-size: 30px;
-        }
-
-        header p {
-            margin: 0;
-            font-size: 15px;
-        }
-
-        nav {
-            background-color: #555;
-            text-align: center;
-            padding: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .intro {
-            background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .intro h2 {
-            margin-top: 0;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .gallery-item {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-            transition: 0.3s;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .caption {
-            padding: 18px;
-        }
-
-        .caption h3 {
-            margin: 0 0 8px;
-            font-size: 19px;
-        }
-
-        .caption p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        footer {
-            background-color: #303030;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 800px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 550px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-        }
-    </style>
+    <title>Sumedha | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <h1>My Gallery</h1>
-        <p>My Interests, Skills and Learning Journey</p>
-    </header>
+<nav class="navbar">
+    <div class="logo">SUMEDHA.</div>
 
-    <nav>
+    <div class="nav-links">
         <a href="portfolio.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="gallery.html">Projects</a>
         <a href="contact.html">Contact</a>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
+<main>
 
-        <div class="intro">
-            <h2>My Gallery</h2>
-            <p>
-                This gallery represents my personal interests,
-                technical skills, hobbies and academic journey.
-            </p>
-        </div>
+<section class="page about-page">
 
-        <div class="gallery">
+    <div class="number">02</div>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-                     alt="Coding">
-                <div class="caption">
-                    <h3>Coding & Programming</h3>
-                    <p>
-                        I enjoy learning programming languages such as
-                        C, Java and Python and improving my coding skills.
-                    </p>
-                </div>
-            </div>
+    <div class="about-intro">
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80"
-                     alt="Artificial Intelligence">
-                <div class="caption">
-                    <h3>AI & Machine Learning</h3>
-                    <p>
-                        Artificial Intelligence and Machine Learning are
-                        areas that I am interested in exploring and learning.
-                    </p>
-                </div>
-            </div>
+        <p class="eyebrow">ABOUT ME</p>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80"
-                     alt="Reading books">
-                <div class="caption">
-                    <h3>Reading Novels</h3>
-                    <p>
-                        Reading novels is one of my favourite hobbies.
-                        I enjoy spending my free time exploring different stories.
-                    </p>
-                </div>
-            </div>
+        <h1>
+            A curious mind<br>
+            with a passion for<br>
+            learning & creating.
+        </h1>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"
-                     alt="Cooking">
-                <div class="caption">
-                    <h3>Cooking</h3>
-                    <p>
-                        Cooking is one of my personal interests.
-                        I enjoy trying new recipes and learning new dishes.
-                    </p>
-                </div>
-            </div>
+        <div class="line"></div>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80"
-                     alt="Dancing">
-                <div class="caption">
-                    <h3>Dancing</h3>
-                    <p>
-                        Dancing is one of my favourite activities.
-                        It helps me express myself and enjoy my free time.
-                    </p>
-                </div>
-            </div>
+        <p>
+            I'm Sumedha, a third-year B.Tech student specializing in
+            Computer Science Engineering with Artificial Intelligence
+            and Machine Learning at Rajeev Gandhi Memorial College of
+            Engineering and Technology.
+        </p>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80"
-                     alt="Watching movies">
-                <div class="caption">
-                    <h3>Watching Movies</h3>
-                    <p>
-                        Watching movies is another hobby I enjoy.
-                        I like exploring different genres and stories.
-                    </p>
-                </div>
-            </div>
+        <p>
+            I enjoy understanding how things work and learning through
+            hands-on projects. My journey has taken me from C and Java
+            programming to Python, Machine Learning and exploring
+            Large Language Models.
+        </p>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-                     alt="Teamwork">
-                <div class="caption">
-                    <h3>Projects & Teamwork</h3>
-                    <p>
-                        I enjoy working with friends and participating
-                        in academic projects and group activities.
-                    </p>
-                </div>
-            </div>
+        <p>
+            Outside technology, I enjoy cooking, dancing, reading novels,
+            watching movies and discovering new things to learn.
+        </p>
 
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-                     alt="Learning">
-                <div class="caption">
-                    <h3>Learning New Skills</h3>
-                    <p>
-                        I like learning new technologies and developing
-                        my skills through projects and practice.
-                    </p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80"
-                     alt="E-waste project">
-                <div class="caption">
-                    <h3>E-Waste Project</h3>
-                    <p>
-                        I have explored project ideas related to
-                        electronic waste and its impact on the environment.
-                    </p>
-                </div>
-            </div>
-
-        </div>
     </div>
 
-    <footer>
-        © 2026 Sumedha Yelukuru | My Portfolio
-    </footer>
+    <div class="about-visual">
+
+        <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85"
+            alt="Students learning together"
+        >
+
+        <div class="about-highlight">
+
+            <div>
+                <strong>STUDENT</strong>
+                <p>Always learning<br>new things</p>
+            </div>
+
+            <div>
+                <strong>DEVELOPER</strong>
+                <p>Building through<br>projects</p>
+            </div>
+
+            <div>
+                <strong>EXPLORER</strong>
+                <p>Curious about<br>new ideas</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="page skills-page">
+
+    <div class="number">05</div>
+
+    <div class="skills-section">
+
+        <p class="eyebrow">SKILLS</p>
+
+        <h2>
+            What I'm<br>
+            learning & using
+        </h2>
+
+        <div class="skill-grid">
+
+            <div class="skill-item">
+                <span>01</span>
+                <h3>C Programming</h3>
+                <p>Programming fundamentals and problem solving.</p>
+            </div>
+
+            <div class="skill-item">
+                <span>02</span>
+                <h3>Java</h3>
+                <p>Object-oriented programming and application development.</p>
+            </div>
+
+            <div class="skill-item">
+                <span>03</span>
+                <h3>Python</h3>
+                <p>Programming, data handling and ML experimentation.</p>
+            </div>
+
+            <div class="skill-item">
+                <span>04</span>
+                <h3>Machine Learning</h3>
+                <p>Exploring models, data and intelligent systems.</p>
+            </div>
+
+            <div class="skill-item">
+                <span>05</span>
+                <h3>Artificial Intelligence</h3>
+                <p>Interested in AI applications and emerging technologies.</p>
+            </div>
+
+            <div class="skill-item">
+                <span>06</span>
+                <h3>ADSA</h3>
+                <p>Basic understanding of algorithms and data structures.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="education-section">
+
+        <p class="eyebrow">EDUCATION</p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+
+                <div>
+                    <small>2024 – PRESENT</small>
+                    <h3>B.Tech CSE (AI & ML)</h3>
+                    <p>
+                        Rajeev Gandhi Memorial College of Engineering
+                        and Technology
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+
+                <div>
+                    <small>3rd YEAR</small>
+                    <h3>Exploring AI & ML</h3>
+                    <p>
+                        Developing programming skills and working on
+                        academic projects involving AI, ML and LLMs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <span>SUMEDHA.</span>
+    <span>Learning · Creating · Exploring</span>
+    <span>© 2026</span>
+</footer>
 
 </body>
 </html>
