@@ -1,134 +1,280 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Projects - Sumedha Yelukuru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sumedha Yelukuru</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #303030;
             color: white;
             text-align: center;
             padding: 25px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 15px;
         }
 
         nav {
             background-color: #555;
             text-align: center;
-            padding: 15px;
+            padding: 12px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 0 18px;
+            font-weight: bold;
         }
 
-        section {
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
             background-color: white;
-            margin: 20px auto;
             padding: 25px;
-            max-width: 800px;
             border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: center;
         }
 
-        article {
+        .intro h2 {
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
             border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 18px;
+        }
+
+        .caption h3 {
+            margin: 0 0 8px;
+            font-size: 19px;
+        }
+
+        .caption p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #303030;
+            color: white;
+            text-align: center;
             padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
+            margin-top: 30px;
         }
 
-        h2 {
-            color: #333;
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        h3 {
-            color: #555;
+        @media (max-width: 550px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>My Projects</h1>
-    <p>Projects and experiences from my learning journey</p>
-</header>
+    <header>
+        <h1>My Gallery</h1>
+        <p>My Interests, Skills and Learning Journey</p>
+    </header>
 
-<nav>
-    <a href="portfolio.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Projects</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="portfolio.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-<section>
+    <div class="container">
 
-    <h2>Academic & Project Experience</h2>
+        <div class="intro">
+            <h2>My Gallery</h2>
+            <p>
+                This gallery represents my personal interests,
+                technical skills, hobbies and academic journey.
+            </p>
+        </div>
 
-    <article>
-        <h3>1. Club Membership Checker - C</h3>
+        <div class="gallery">
 
-        <p>
-            A college assignment developed using C programming
-            to implement a club membership checking system.
-        </p>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                     alt="Coding">
+                <div class="caption">
+                    <h3>Coding & Programming</h3>
+                    <p>
+                        I enjoy learning programming languages such as
+                        C, Java and Python and improving my coding skills.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            <strong>Technology:</strong> C Programming
-        </p>
-    </article>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80"
+                     alt="Artificial Intelligence">
+                <div class="caption">
+                    <h3>AI & Machine Learning</h3>
+                    <p>
+                        Artificial Intelligence and Machine Learning are
+                        areas that I am interested in exploring and learning.
+                    </p>
+                </div>
+            </div>
 
-    <article>
-        <h3>2. Club Membership Checker - Java</h3>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=800&q=80"
+                     alt="Reading books">
+                <div class="caption">
+                    <h3>Reading Novels</h3>
+                    <p>
+                        Reading novels is one of my favourite hobbies.
+                        I enjoy spending my free time exploring different stories.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            A Java-based version of the club membership checker
-            developed as part of my college programming assignments.
-        </p>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"
+                     alt="Cooking">
+                <div class="caption">
+                    <h3>Cooking</h3>
+                    <p>
+                        Cooking is one of my personal interests.
+                        I enjoy trying new recipes and learning new dishes.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            <strong>Technology:</strong> Java
-        </p>
-    </article>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80"
+                     alt="Dancing">
+                <div class="caption">
+                    <h3>Dancing</h3>
+                    <p>
+                        Dancing is one of my favourite activities.
+                        It helps me express myself and enjoy my free time.
+                    </p>
+                </div>
+            </div>
 
-    <article>
-        <h3>3. E-Waste Management Project</h3>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80"
+                     alt="Watching movies">
+                <div class="caption">
+                    <h3>Watching Movies</h3>
+                    <p>
+                        Watching movies is another hobby I enjoy.
+                        I like exploring different genres and stories.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            A group project focused on the problem of electronic
-            waste. This project was developed with my friends
-            during Google WOW 2026 in Vizag.
-        </p>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                     alt="Teamwork">
+                <div class="caption">
+                    <h3>Projects & Teamwork</h3>
+                    <p>
+                        I enjoy working with friends and participating
+                        in academic projects and group activities.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            <strong>Type:</strong> Group Project / Hackathon
-        </p>
-    </article>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                     alt="Learning">
+                <div class="caption">
+                    <h3>Learning New Skills</h3>
+                    <p>
+                        I like learning new technologies and developing
+                        my skills through projects and practice.
+                    </p>
+                </div>
+            </div>
 
-    <article>
-        <h3>4. Automatic Generation of High-Quality MCQs With LLMs</h3>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80"
+                     alt="E-waste project">
+                <div class="caption">
+                    <h3>E-Waste Project</h3>
+                    <p>
+                        I have explored project ideas related to
+                        electronic waste and its impact on the environment.
+                    </p>
+                </div>
+            </div>
 
-        <p>
-            A current project focused on the automatic generation
-            of high-quality multiple-choice questions for
-            Artificial Intelligence education using Large Language
-            Models.
-        </p>
+        </div>
+    </div>
 
-        <p>
-            <strong>Area:</strong> Machine Learning & Large Language Models
-        </p>
-    </article>
-
-</section>
+    <footer>
+        © 2026 Sumedha Yelukuru | My Portfolio
+    </footer>
 
 </body>
 </html>
