@@ -3,100 +3,556 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumedha | Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <title>Contact | Sumedha Yelukuru</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: #f7f1e7;
+            color: #302820;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            width: 100%;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d8cdbd;
+            background-color: #f7f1e7;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 30px;
+            font-weight: bold;
+            color: #59683c;
+        }
+
+        .brand-course {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #8d6f65;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 42px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #302820;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #59683c;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #59683c;
+            padding-bottom: 5px;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+            width: 86%;
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 0 80px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+
+        /* ================= LEFT SIDE ================= */
+
+        .section-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #a06f63;
+            margin-bottom: 15px;
+        }
+
+        .contact-intro h1 {
+            font-size: 58px;
+            font-weight: normal;
+            line-height: 1.05;
+            color: #302820;
+            margin-bottom: 22px;
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 2px;
+            background-color: #b78d83;
+            margin-bottom: 25px;
+        }
+
+        .intro-text {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #5d554d;
+            max-width: 430px;
+            margin-bottom: 35px;
+        }
+
+
+        /* ================= CONTACT DETAILS ================= */
+
+        .contact-details {
+            border-top: 1px solid #d4c7b7;
+        }
+
+        .contact-item {
+            padding: 17px 0;
+            border-bottom: 1px solid #d4c7b7;
+        }
+
+        .contact-label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #a06f63;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: #302820;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            color: #59683c;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .contact-form {
+            border: 1px solid #d4c7b7;
+            background-color: #fbf7f0;
+            padding: 35px;
+        }
+
+        .form-title {
+            font-size: 28px;
+            font-weight: normal;
+            color: #59683c;
+            margin-bottom: 8px;
+        }
+
+        .form-subtitle {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #746b62;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #59683c;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #cfc1ae;
+            background-color: #fffdf8;
+            padding: 14px 15px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #302820;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input {
+            height: 48px;
+        }
+
+        .form-group textarea {
+            height: 135px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #7b875d;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #9b9288;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .send-button {
+            border: none;
+            background-color: #596044;
+            color: white;
+            padding: 14px 25px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .send-button:hover {
+            background-color: #3f472f;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid #d8cdbd;
+            padding: 24px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #80756b;
+        }
+
+        .footer-name {
+            color: #59683c;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                width: 90%;
+                padding-top: 45px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-intro h1 {
+                font-size: 48px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">SUMEDHA.</div>
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-links">
-        <a href="portfolio.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
-    </div>
-</nav>
+    <nav>
 
-<main>
+        <div class="brand">
 
-<section class="page contact-page">
+            <div class="brand-name">
+                Sumedha Yelukuru
+            </div>
 
-    <div class="number">07</div>
-
-    <div class="contact-intro">
-
-        <p class="eyebrow">CONTACT</p>
-
-        <h1>
-            Let's<br>
-            Connect!
-        </h1>
-
-        <div class="line"></div>
-
-        <p>
-            I'm always interested in learning, exploring new ideas
-            and connecting with people who enjoy creating meaningful
-            things.
-        </p>
-
-        <div class="contact-links">
-
-            <a href="mailto:your-email@example.com">
-                <span>EMAIL</span>
-                your-email@example.com
-            </a>
-
-            <a href="#" target="_blank">
-                <span>GITHUB</span>
-                github.com/yourusername
-            </a>
-
-            <a href="#" target="_blank">
-                <span>LINKEDIN</span>
-                linkedin.com/in/yourusername
-            </a>
+            <div class="brand-course">
+                CSE (AI & ML)
+            </div>
 
         </div>
 
-    </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="portfolio.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 
-    <form class="contact-form">
+    <!-- ================= MAIN ================= -->
 
-        <label for="name">NAME</label>
-        <input type="text" id="name" placeholder="Your name">
+    <main>
 
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" placeholder="Your email">
-
-        <label for="message">MESSAGE</label>
-        <textarea id="message" rows="7" placeholder="Write your message"></textarea>
-
-        <button type="submit">
-            SEND MESSAGE <span>→</span>
-        </button>
-
-    </form>
+        <div class="contact-container">
 
 
-    <div class="contact-art">
-        ✦
-    </div>
+            <!-- ================= CONTACT INFORMATION ================= -->
 
-</section>
+            <section class="contact-intro">
 
-</main>
+                <div class="section-label">
+                    CONTACT
+                </div>
 
-<footer>
-    <span>SUMEDHA.</span>
-    <span>Thanks for visiting. ♡</span>
-    <span>© 2026</span>
-</footer>
+                <h1>
+                    Let's<br>
+                    Connect!
+                </h1>
+
+                <div class="accent-line"></div>
+
+                <p class="intro-text">
+                    I'm always happy to connect, learn from new people,
+                    discuss ideas, and explore opportunities to work on
+                    interesting projects together.
+                </p>
+
+
+                <div class="contact-details">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            EMAIL
+                        </div>
+
+                        <a href="mailto:sumedhayelukuru13@gmail.com">
+                            sumedhayelukuru13@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <!-- GITHUB -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            GITHUB
+                        </div>
+
+                        <a
+                            href="https://github.com/sumedhayelukuru"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            github.com/sumedhayelukuru
+                        </a>
+
+                    </div>
+
+
+                    <!-- LINKEDIN -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-label">
+                            LINKEDIN
+                        </div>
+
+                        <a
+                            href="https://www.linkedin.com/in/sumedha-yelukuru-b2a905326"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            linkedin.com/in/sumedha-yelukuru
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= MESSAGE FORM ================= -->
+
+            <section class="contact-form">
+
+                <h2 class="form-title">
+                    Send a Message
+                </h2>
+
+                <p class="form-subtitle">
+                    Have a question or just want to say hello?
+                </p>
+
+
+                <form
+                    action="mailto:sumedhayelukuru13@gmail.com"
+                    method="post"
+                    enctype="text/plain"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            EMAIL
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="Email"
+                            placeholder="Your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="Message"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="send-button"
+                    >
+                        SEND MESSAGE →
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-name">
+            Sumedha Yelukuru
+        </div>
+
+        <div>
+            Thanks for visiting.
+        </div>
+
+        <div>
+            © 2026
+        </div>
+
+    </footer>
+
 
 </body>
 </html>

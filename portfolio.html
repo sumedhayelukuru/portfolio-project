@@ -3,84 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumedha | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <title>Sumedha Yelukuru | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4efe8;
+            color: #171717;
+            font-family: Arial, sans-serif;
+        }
+
+        .home {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 150px;
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 24% 0 6%;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        /* NAME */
+
+        .logo {
+            margin-top: -5px;
+        }
+
+        .logo h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 29px;
+            font-weight: normal;
+
+            letter-spacing: 0.5px;
+        }
+
+        .logo p {
+            margin-top: 8px;
+
+            font-size: 15px;
+
+            letter-spacing: 1.5px;
+
+            color: #65664a;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            gap: 48px;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            color: #171717;
+
+            font-size: 16px;
+
+            padding-bottom: 8px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a85d47;
+        }
+
+        nav a:first-child {
+            color: #a85d47;
+
+            border-bottom: 1px solid #a85d47;
+        }
+
+
+        /* ================= HEADER LINE ================= */
+
+        .header-line {
+            position: absolute;
+
+            left: 4%;
+            right: 24%;
+
+            top: 150px;
+
+            height: 1px;
+
+            background-color: #222;
+        }
+
+
+        /* ================= OLIVE RECTANGLE ================= */
+
+        .green-box {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            width: 20%;
+
+            height: 100vh;
+
+            background-color: #65664a;
+
+            z-index: 0;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            position: relative;
+            z-index: 1;
+
+            width: 76%;
+
+            min-height: calc(100vh - 150px);
+
+            padding-left: 8%;
+
+            padding-top: 17vh;
+
+            padding-bottom: 100px;
+        }
+
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+
+        /* HELLO I'M */
+
+        .hello {
+            font-size: 20px;
+
+            font-weight: bold;
+
+            letter-spacing: 5px;
+
+            color: #a85d47;
+
+            margin-bottom: 24px;
+        }
+
+
+        /* SUMEDHA */
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(70px, 8vw, 120px);
+
+            line-height: 0.95;
+
+            font-weight: normal;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 34px;
+        }
+
+
+        /* ROLE */
+
+        .role {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 27px;
+
+            line-height: 1.4;
+
+            margin-bottom: 27px;
+        }
+
+        .role span {
+            color: #a85d47;
+        }
+
+
+        /* DESCRIPTION */
+
+        .description {
+            max-width: 650px;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 38px;
+        }
+
+
+        /* EXPLORE BUTTON */
+
+        .explore-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            background-color: #65664a;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 18px 30px;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            transition: 0.3s;
+        }
+
+        .explore-btn:hover {
+            background-color: #505139;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= BOTTOM LINE ================= */
+
+        .bottom {
+            position: absolute;
+
+            left: 4%;
+
+            right: 24%;
+
+            bottom: 0;
+
+            height: 72px;
+
+            border-top: 1px solid #222;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 17px;
+
+            letter-spacing: 2px;
+
+            color: #65664a;
+        }
+
+        .bottom span {
+            color: #a85d47;
+
+            margin: 0 14px;
+        }
+
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 1000px) {
+
+            header {
+                padding-right: 22%;
+            }
+
+            .header-line {
+                right: 22%;
+            }
+
+            .green-box {
+                width: 22%;
+            }
+
+            nav {
+                gap: 25px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                width: 78%;
+
+                padding-left: 8%;
+
+                padding-top: 14vh;
+            }
+
+            .hero h1 {
+                font-size: 80px;
+            }
+
+            .role {
+                font-size: 23px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .bottom {
+                right: 22%;
+            }
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 650px) {
+
+            .green-box {
+                width: 17%;
+            }
+
+            header {
+                height: 120px;
+
+                padding: 20px 20% 15px 5%;
+
+                align-items: flex-start;
+            }
+
+            .logo h2 {
+                font-size: 20px;
+            }
+
+            .logo p {
+                font-size: 11px;
+            }
+
+            nav {
+                gap: 10px;
+
+                flex-wrap: wrap;
+
+                justify-content: flex-end;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .header-line {
+                top: 120px;
+
+                left: 4%;
+
+                right: 17%;
+            }
+
+            .hero {
+                width: 83%;
+
+                min-height: calc(100vh - 120px);
+
+                padding-left: 7%;
+
+                padding-top: 15vh;
+
+                padding-right: 5%;
+            }
+
+            .hello {
+                font-size: 14px;
+
+                letter-spacing: 3px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -1px;
+            }
+
+            .role {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+            .explore-btn {
+                padding: 14px 20px;
+
+                font-size: 11px;
+            }
+
+            .bottom {
+                left: 4%;
+
+                right: 17%;
+
+                font-size: 11px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">SUMEDHA.</div>
+    <section class="home">
 
-    <div class="nav-links">
-        <a href="portfolio.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+        <!-- OLIVE GREEN PANEL -->
+        <div class="green-box"></div>
 
-<main>
 
-<section class="page home-page">
+        <!-- HEADER -->
+        <header>
 
-    <div class="number">01</div>
+            <!-- NAME -->
+            <div class="logo">
+                <h2>Sumedha Yelukuru</h2>
+                <p>CSE (AI &amp; ML)</p>
+            </div>
 
-    <div class="home-content">
 
-        <p class="eyebrow">HELLO, I'M</p>
+            <!-- NAVIGATION -->
+            <nav>
+                <a href="portfolio.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-        <h1>Sumedha<span>.</span></h1>
+        </header>
 
-        <h2>CSE (AI & ML) Student · Developer · Explorer</h2>
 
-        <div class="line"></div>
+        <!-- SEPARATION LINE -->
+        <div class="header-line"></div>
 
-        <p class="description">
-            I'm a curious Computer Science student who enjoys learning
-            technology, solving problems and turning ideas into practical
-            projects.
-        </p>
 
-        <p class="description">
-            My interests currently lie in programming, Machine Learning,
-            Artificial Intelligence and exploring how emerging technologies
-            can create meaningful solutions.
-        </p>
+        <!-- HERO CONTENT -->
+        <main class="hero">
 
-        <a href="gallery.html" class="button">
-            EXPLORE MY WORK <span>→</span>
-        </a>
+            <div class="hero-content">
 
-    </div>
+                <p class="hello">
+                    HELLO, I'M
+                </p>
 
-    <aside class="social-bar">
 
-        <div class="social-line"></div>
+                <h1>
+                    Sumedha.
+                </h1>
 
-        <a href="#" target="_blank">GITHUB</a>
-        <a href="#" target="_blank">LINKEDIN</a>
-        <a href="contact.html">EMAIL</a>
 
-        <div class="social-line"></div>
+                <p class="role">
+                    CSE (AI &amp; ML) Student
+                    <span>•</span>
+                    Developer
+                    <span>•</span>
+                    Explorer
+                </p>
 
-    </aside>
 
-    <div class="scroll-text">
-        SCROLL DOWN
-        <span>↓</span>
-    </div>
+                <p class="description">
+                    I love building things, exploring ideas and learning
+                    new technologies. I enjoy turning what I learn into
+                    meaningful projects and discovering new experiences
+                    along the way.
+                </p>
 
-</section>
 
-</main>
+                <!-- OPENS ABOUT PAGE -->
+                <a href="about.html" class="explore-btn">
+                    EXPLORE NOW →
+                </a>
 
-<footer>
-    <span>SUMEDHA.</span>
-    <span>Learning · Creating · Exploring</span>
-    <span>© 2026</span>
-</footer>
+            </div>
+
+        </main>
+
+
+        <!-- BOTTOM -->
+        <div class="bottom">
+            Learning
+            <span>•</span>
+            Creating
+            <span>•</span>
+            Exploring
+        </div>
+
+    </section>
 
 </body>
 </html>

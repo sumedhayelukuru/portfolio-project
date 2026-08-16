@@ -3,194 +3,712 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumedha | About</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <title>Gallery | Sumedha Yelukuru</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f1e7;
+            color: #302820;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            width: 100%;
+            padding: 22px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #d8cdbd;
+            background: #f7f1e7;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 30px;
+            font-weight: bold;
+            color: #59683c;
+        }
+
+        .brand-course {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #8d6f65;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 42px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #302820;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #59683c;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #59683c;
+            padding-bottom: 5px;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+            width: 86%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 0 80px;
+        }
+
+
+        /* ================= SECTION TITLES ================= */
+
+        .section-title {
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            font-weight: normal;
+            color: #59683c;
+            letter-spacing: 1px;
+        }
+
+        .section-title .line {
+            width: 55px;
+            height: 2px;
+            background: #b78d83;
+            margin-top: 8px;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 55px;
+            align-items: center;
+            margin-bottom: 65px;
+        }
+
+        .experience-image {
+            width: 100%;
+            height: 370px;
+            overflow: hidden;
+            border: 1px solid #cfc1ae;
+            border-radius: 10px;
+            background: #e8dfd2;
+        }
+
+        .experience-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .experience-content {
+            padding: 10px 0;
+        }
+
+        .small-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #a06f63;
+            margin-bottom: 10px;
+        }
+
+        .experience-content h3 {
+            font-size: 38px;
+            font-weight: normal;
+            color: #302820;
+            margin-bottom: 18px;
+        }
+
+        .experience-content p {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #514a43;
+            max-width: 480px;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            margin-top: 5px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #d4c7b7;
+            background: #fbf7f0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(73, 61, 50, 0.13);
+        }
+
+
+        /* ================= PROJECT IMAGE AREAS ================= */
+
+        .project-image {
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        /* C PROJECT */
+
+        .c-project {
+            background: #607a52;
+            padding: 20px;
+            color: white;
+        }
+
+        .c-title {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .dashboard {
+            background: #f5f0e8;
+            color: #302820;
+            border-radius: 7px;
+            padding: 13px;
+            height: 115px;
+        }
+
+        .dashboard-top {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-box {
+            background: #ffffff;
+            border: 1px solid #ddd2c4;
+            padding: 6px;
+            flex: 1;
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+        }
+
+        .dashboard-table {
+            height: 45px;
+            background: #ffffff;
+            border: 1px solid #ddd2c4;
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            padding: 7px;
+            line-height: 1.8;
+        }
+
+
+        /* E-WASTE */
+
+        .ewaste-project {
+            background: #e9dec7;
+            padding: 20px;
+            position: relative;
+        }
+
+        .ewaste-title {
+            font-family: Arial, sans-serif;
+            color: #405b3d;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .recycle-symbol {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 60px;
+            background: #4f7549;
+            clip-path: polygon(
+                50% 0%,
+                100% 28%,
+                82% 35%,
+                65% 18%,
+                72% 55%,
+                100% 55%,
+                75% 100%,
+                45% 72%,
+                55% 68%,
+                35% 38%,
+                27% 60%,
+                0% 50%,
+                20% 5%,
+                35% 30%
+            );
+        }
+
+
+        /* LLM PROJECT */
+
+        .llm-project {
+            background: #151c3e;
+            color: white;
+            padding: 22px;
+            position: relative;
+        }
+
+        .llm-title {
+            font-family: Arial, sans-serif;
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-top: 15px;
+        }
+
+        .brain {
+            position: absolute;
+            right: 30px;
+            top: 25px;
+            width: 75px;
+            height: 75px;
+            border: 3px solid #8b63d9;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .brain::before,
+        .brain::after {
+            content: "";
+            position: absolute;
+            border: 2px solid #8b63d9;
+        }
+
+        .brain::before {
+            width: 40px;
+            height: 50px;
+            left: 15px;
+            top: 10px;
+            border-radius: 50%;
+        }
+
+        .brain::after {
+            width: 50px;
+            height: 2px;
+            left: 10px;
+            top: 36px;
+        }
+
+
+        /* ================= PROJECT INFO ================= */
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-number {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #a06f63;
+            margin-bottom: 8px;
+        }
+
+        .project-info h3 {
+            font-size: 21px;
+            line-height: 1.35;
+            font-weight: normal;
+            color: #59683c;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #625a52;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid #d8cdbd;
+            text-align: center;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #80756b;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            main {
+                width: 90%;
+                padding-top: 45px;
+            }
+
+            .experience {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .experience-image {
+                height: 330px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">SUMEDHA.</div>
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-links">
-        <a href="portfolio.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="gallery.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+    <nav>
 
-<main>
-
-<section class="page about-page">
-
-    <div class="number">02</div>
-
-    <div class="about-intro">
-
-        <p class="eyebrow">ABOUT ME</p>
-
-        <h1>
-            A curious mind<br>
-            with a passion for<br>
-            learning & creating.
-        </h1>
-
-        <div class="line"></div>
-
-        <p>
-            I'm Sumedha, a third-year B.Tech student specializing in
-            Computer Science Engineering with Artificial Intelligence
-            and Machine Learning at Rajeev Gandhi Memorial College of
-            Engineering and Technology.
-        </p>
-
-        <p>
-            I enjoy understanding how things work and learning through
-            hands-on projects. My journey has taken me from C and Java
-            programming to Python, Machine Learning and exploring
-            Large Language Models.
-        </p>
-
-        <p>
-            Outside technology, I enjoy cooking, dancing, reading novels,
-            watching movies and discovering new things to learn.
-        </p>
-
-    </div>
-
-    <div class="about-visual">
-
-        <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85"
-            alt="Students learning together"
-        >
-
-        <div class="about-highlight">
-
-            <div>
-                <strong>STUDENT</strong>
-                <p>Always learning<br>new things</p>
+        <div class="brand">
+            <div class="brand-name">
+                Sumedha Yelukuru
             </div>
 
-            <div>
-                <strong>DEVELOPER</strong>
-                <p>Building through<br>projects</p>
+            <div class="brand-course">
+                CSE (AI & ML)
             </div>
-
-            <div>
-                <strong>EXPLORER</strong>
-                <p>Curious about<br>new ideas</p>
-            </div>
-
         </div>
 
-    </div>
 
-</section>
+        <ul class="nav-links">
+
+            <li>
+                <a href="portfolio.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 
-<section class="page skills-page">
+    <main>
 
-    <div class="number">05</div>
 
-    <div class="skills-section">
+        <!-- ================= EXPERIENCES ================= -->
 
-        <p class="eyebrow">SKILLS</p>
+        <section>
 
-        <h2>
-            What I'm<br>
-            learning & using
-        </h2>
-
-        <div class="skill-grid">
-
-            <div class="skill-item">
-                <span>01</span>
-                <h3>C Programming</h3>
-                <p>Programming fundamentals and problem solving.</p>
+            <div class="section-title">
+                <h2>EXPERIENCES</h2>
+                <div class="line"></div>
             </div>
 
-            <div class="skill-item">
-                <span>02</span>
-                <h3>Java</h3>
-                <p>Object-oriented programming and application development.</p>
-            </div>
 
-            <div class="skill-item">
-                <span>03</span>
-                <h3>Python</h3>
-                <p>Programming, data handling and ML experimentation.</p>
-            </div>
+            <div class="experience">
 
-            <div class="skill-item">
-                <span>04</span>
-                <h3>Machine Learning</h3>
-                <p>Exploring models, data and intelligent systems.</p>
-            </div>
 
-            <div class="skill-item">
-                <span>05</span>
-                <h3>Artificial Intelligence</h3>
-                <p>Interested in AI applications and emerging technologies.</p>
-            </div>
+                <!-- WOWFEST IMAGE -->
 
-            <div class="skill-item">
-                <span>06</span>
-                <h3>ADSA</h3>
-                <p>Basic understanding of algorithms and data structures.</p>
-            </div>
+                <div class="experience-image">
 
-        </div>
+                    <img
+                        src="images/wowfest-2026.jpg"
+                        alt="WOWFEST 2026 at GITAM"
+                    >
 
-    </div>
-
-    <div class="education-section">
-
-        <p class="eyebrow">EDUCATION</p>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <div class="dot"></div>
-
-                <div>
-                    <small>2024 – PRESENT</small>
-                    <h3>B.Tech CSE (AI & ML)</h3>
-                    <p>
-                        Rajeev Gandhi Memorial College of Engineering
-                        and Technology
-                    </p>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="dot"></div>
 
-                <div>
-                    <small>3rd YEAR</small>
-                    <h3>Exploring AI & ML</h3>
+                <!-- WOWFEST INFORMATION -->
+
+                <div class="experience-content">
+
+                    <div class="small-label">
+                        EXPERIENCE · 2026
+                    </div>
+
+                    <h3>
+                        WOWFEST 2026
+                    </h3>
+
                     <p>
-                        Developing programming skills and working on
-                        academic projects involving AI, ML and LLMs.
+                        Attended WOWFEST 2026 at GITAM, an event that brought
+                        together students, innovators and technology
+                        enthusiasts. The experience provided an opportunity
+                        to explore new ideas, learn from others and gain
+                        exposure to innovation and real-world technology.
                     </p>
+
                 </div>
+
             </div>
 
-        </div>
+        </section>
 
-    </div>
 
-</section>
 
-</main>
+        <!-- ================= PROJECTS ================= -->
 
-<footer>
-    <span>SUMEDHA.</span>
-    <span>Learning · Creating · Exploring</span>
-    <span>© 2026</span>
-</footer>
+        <section class="projects">
+
+
+            <div class="section-title">
+
+                <h2>
+                    PROJECTS
+                </h2>
+
+                <div class="line"></div>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- ================= PROJECT 1 ================= -->
+
+                <a
+                    href="project.html?project=c-membership"
+                    class="project-card"
+                >
+
+                    <div class="project-image c-project">
+
+                        <div class="c-title">
+                            CLUB MEMBERSHIP<br>
+                            EXPIRY CHECKER
+                        </div>
+
+                        <div class="dashboard">
+
+                            <div class="dashboard-top">
+
+                                <div class="dashboard-box">
+                                    Total Members<br>
+                                    <strong>120</strong>
+                                </div>
+
+                                <div class="dashboard-box">
+                                    Active<br>
+                                    <strong>98</strong>
+                                </div>
+
+                                <div class="dashboard-box">
+                                    Expiring<br>
+                                    <strong>15</strong>
+                                </div>
+
+                            </div>
+
+                            <div class="dashboard-table">
+                                Name &nbsp;&nbsp;&nbsp;&nbsp; Membership ID
+                                &nbsp;&nbsp;&nbsp;&nbsp; Expiry Date<br>
+                                Member 01 &nbsp;&nbsp; C001
+                                &nbsp;&nbsp;&nbsp;&nbsp; 25 May 2025<br>
+                                Member 02 &nbsp;&nbsp; C002
+                                &nbsp;&nbsp;&nbsp;&nbsp; 02 Jun 2025
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-number">
+                            01 · C PROGRAMMING
+                        </div>
+
+                        <h3>
+                            Club Membership Expiry Checker — C
+                        </h3>
+
+                        <p>
+                            A C-based application designed to manage club
+                            membership records, check expiry dates and
+                            identify memberships that require attention.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ================= PROJECT 2 ================= -->
+
+                <a
+                    href="project.html?project=ewaste"
+                    class="project-card"
+                >
+
+                    <div class="project-image ewaste-project">
+
+                        <div class="ewaste-title">
+                            E-WASTE MANAGEMENT
+                        </div>
+
+                        <div class="recycle-symbol"></div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-number">
+                            02 · GROUP PROJECT
+                        </div>
+
+                        <h3>
+                            E-Waste Management Project
+                        </h3>
+
+                        <p>
+                            A project focused on responsible collection,
+                            recycling and disposal of electronic waste,
+                            while creating awareness about sustainable
+                            practices.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ================= PROJECT 3 ================= -->
+
+                <a
+                    href="project.html?project=mcq-llm"
+                    class="project-card"
+                >
+
+                    <div class="project-image llm-project">
+
+                        <div class="llm-title">
+                            MCQ<br>
+                            GENERATOR<br>
+                            USING LLMs
+                        </div>
+
+                        <div class="brain"></div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-number">
+                            03 · AI / LLM
+                        </div>
+
+                        <h3>
+                            Automatic Generation of High-Quality MCQs with LLMs
+                        </h3>
+
+                        <p>
+                            An AI-focused project exploring the use of Large
+                            Language Models to automatically generate
+                            high-quality multiple-choice questions.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        © 2026 Sumedha Yelukuru · CSE (AI & ML)
+    </footer>
+
 
 </body>
 </html>
